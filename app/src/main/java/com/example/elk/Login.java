@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +12,7 @@ import com.royrodriguez.transitionbutton.TransitionButton;
 
 public class Login extends AppCompatActivity {
         private TransitionButton transitionButton;
+        private EditText et_account,et_password;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,9 @@ public class Login extends AppCompatActivity {
             setContentView(R.layout.activity_login);
 
             transitionButton = findViewById(R.id.transition_button);
+            et_account=findViewById(R.id.editText);
+            et_password=findViewById(R.id.editText2);
+
             transitionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -29,7 +34,11 @@ public class Login extends AppCompatActivity {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            boolean isSuccessful = true;
+                            boolean isSuccessful = false;
+                            if(et_account.getText().toString().equals("ljyjwj")&&et_password.getText().toString().equals("20190523")){
+                                isSuccessful=true;
+                            }
+
 
                             // Choose a stop animation if your call was succesful or not
                             if (isSuccessful) {
