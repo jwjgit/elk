@@ -3,6 +3,7 @@ package com.example.elk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.EditText;
 
@@ -22,6 +23,7 @@ public class Login extends AppCompatActivity {
             transitionButton = findViewById(R.id.transition_button);
             et_account=findViewById(R.id.editText);
             et_password=findViewById(R.id.editText2);
+            et_password.setTransformationMethod(PasswordTransformationMethod.getInstance());
 
             transitionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -45,7 +47,7 @@ public class Login extends AppCompatActivity {
                                 transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.EXPAND, new TransitionButton.OnAnimationStopEndListener() {
                                     @Override
                                     public void onAnimationStopEnd() {
-                                        Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                                        Intent intent = new Intent(getBaseContext(), FerrisWheel.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                         startActivity(intent);
                                     }

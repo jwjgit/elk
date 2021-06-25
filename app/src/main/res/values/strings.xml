@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ELK</string>
     <string name="main_title">Transition Button</string>
-    <string name="main_button">login</string>
-    <string name="main_email_hint">Email</string>
-    <string name="main_password_hint">Password</string>
+    <string name="main_button">登    录</string>
+    <string name="main_email_hint">账号</string>
+    <string name="main_password_hint">密码</string>
 </resources>

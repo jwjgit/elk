@@ -21,7 +21,9 @@
         android:paddingLeft="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:maxLines="1"
+        android:singleLine="true"/>
 
     <EditText
         android:id="@+id/editText2"
@@ -36,7 +38,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        android:maxLines="1"
+        android:singleLine="true"
+       />
 
     <com.royrodriguez.transitionbutton.TransitionButton
         android:id="@+id/transition_button"
