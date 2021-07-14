@@ -2,15 +2,16 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottomSheet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:background="#BF303030"
     android:orientation="vertical"
-
-
-    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="?attr/actionBarSize"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <LinearLayout
         android:id="@+id/view_options_header"
@@ -18,7 +19,8 @@
         android:layout_height="?attr/actionBarSize"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:paddingLeft="10dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="0dp"
@@ -43,9 +45,10 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -72,7 +75,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:max="100"
-                    android:progress="6" />
+                    android:progress="6"
+                    />
 
             </LinearLayout>
 

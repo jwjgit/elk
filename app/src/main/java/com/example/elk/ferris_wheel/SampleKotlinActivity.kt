@@ -13,11 +13,12 @@ import kotlinx.android.synthetic.main.bottomsheet_settings_attributes.*
 import kotlinx.android.synthetic.main.ferriswheel_main.*
 import ru.github.igla.ferriswheel.CabinStyle
 import ru.github.igla.ferriswheel.FerrisWheelView
-
+import  com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 class SampleKotlinActivity : AppCompatActivity() {
 
-    //private lateinit var behavior: BottomSheetBehavior<View>
+    private lateinit var behavior: BottomSheetBehavior<View>
+
 
     private val clickCenterListener = object : FerrisWheelView.OnClickCenterListener {
         override fun onClickCenter(e: MotionEvent) {
@@ -95,7 +96,7 @@ class SampleKotlinActivity : AppCompatActivity() {
         override fun onStopTrackingTouch(seekBar: SeekBar) {
         }
     }
-    /*
+
     override fun onBackPressed() {
         if (behavior.state == BottomSheetBehavior.STATE_EXPANDED) {
             behavior.state = BottomSheetBehavior.STATE_COLLAPSED
@@ -128,5 +129,5 @@ class SampleKotlinActivity : AppCompatActivity() {
         }
     }
 
-     */
+
 }

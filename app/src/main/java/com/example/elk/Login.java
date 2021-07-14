@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.elk.ferris_wheel.SampleKotlinActivity;
 import com.royrodriguez.transitionbutton.TransitionButton;
 
 public class Login extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void run() {
                             boolean isSuccessful = false;
-                            if(et_account.getText().toString().equals("ljyjwj")&&et_password.getText().toString().equals("20190523")){
+                            if(et_account.getText().toString().equals("jwjailjy")&&et_password.getText().toString().equals("20190523")){
                                 isSuccessful=true;
                             }
 
@@ -47,7 +48,9 @@ public class Login extends AppCompatActivity {
                                 transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.EXPAND, new TransitionButton.OnAnimationStopEndListener() {
                                     @Override
                                     public void onAnimationStopEnd() {
-                                        Intent intent = new Intent(getBaseContext(), FerrisWheel.class);
+                                        //Intent intent = new Intent(getBaseContext(), SampleKotlinActivity.class);
+                                        Intent intent = new Intent(getBaseContext(), MainActivity.class);
+
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                         startActivity(intent);
                                     }
