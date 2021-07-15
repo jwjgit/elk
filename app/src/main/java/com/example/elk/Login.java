@@ -49,7 +49,7 @@ public class Login extends AppCompatActivity {
                                     @Override
                                     public void onAnimationStopEnd() {
                                         //Intent intent = new Intent(getBaseContext(), SampleKotlinActivity.class);
-                                        Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                                        Intent intent = new Intent(getBaseContext(),SampleKotlinActivity .class);
 
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                         startActivity(intent);

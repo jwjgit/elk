@@ -4,25 +4,25 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import android.os.Handler;
-import android.view.View;
-
 import nl.dionsegijn.konfetti.KonfettiView;
 import nl.dionsegijn.konfetti.models.Shape;
 import nl.dionsegijn.konfetti.models.Size;
 
-public class MainActivity extends AppCompatActivity {
+public class Birthday extends AppCompatActivity {
 
-    private   KonfettiView konfettiView;
+    private KonfettiView konfettiView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_birthday);
+        /*
 
         konfettiView= findViewById(R.id.viewKonfetti);
         //final KonfettiView viewK=findViewById(R.id.viewK);
@@ -44,11 +44,13 @@ public class MainActivity extends AppCompatActivity {
                         .burst(100);
             }
         });
+
+         */
         Handler handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(MainActivity.this,Login.class);
+                Intent intent=new Intent(Birthday.this,Login.class);
                 startActivity(intent);
             }
         }, 4000);
@@ -77,4 +79,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
     }
+
+
+
+
+
 }
