@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.method.PasswordTransformationMethod;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -49,18 +51,44 @@ public class Login extends AppCompatActivity {
                                     @Override
                                     public void onAnimationStopEnd() {
                                         //Intent intent = new Intent(getBaseContext(), SampleKotlinActivity.class);
-                                        Intent intent = new Intent(getBaseContext(),SampleKotlinActivity .class);
-
+                                        Intent intent = new Intent(getBaseContext(),MainActivity .class);
+                                        intent.putExtra("login","login");
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                         startActivity(intent);
                                     }
                                 });
                             } else {
                                 transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.SHAKE, null);
+                                Toast.makeText(Login.this,"重要的日子都记错了，找打！！！",Toast.LENGTH_LONG).show();
                             }
                         }
                     }, 2000);
                 }
             });
         }
+
+
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+
+
+            try{
+                String statu=getIntent().getStringExtra("start");
+                if(statu.equals("start")){
+
+                }
+            }catch (Exception e){
+
+            }
+
+
+            return   true;
+
+        }
+
+        return  super.onKeyDown(keyCode, event);
+
+    }
 }

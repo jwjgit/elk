@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.os.Handler;
+import android.view.KeyEvent;
 import android.view.View;
 
 import nl.dionsegijn.konfetti.KonfettiView;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         .burst(100);
             }
         });
+        /*
         Handler handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -53,7 +55,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 4000);
 
+         */
+
     }
+
+
 
     @Override
     protected void onStart() {
@@ -71,7 +77,35 @@ public class MainActivity extends AppCompatActivity {
                 .addSizes(new Size(12, 5f))
                 .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
                 .streamFor(300, 5000L);
+
     }
+
+    @Override
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+
+
+            try{
+                String statu=getIntent().getStringExtra("login");
+                if(statu.equals("login")){
+                    Intent intent=new Intent(MainActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
+            }catch (Exception e){
+
+            }
+
+
+            return   true;
+
+        }
+
+        return  super.onKeyDown(keyCode, event);
+
+    }
+
 
     @Override
     protected void onDestroy() {
