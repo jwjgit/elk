@@ -12,7 +12,9 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="200dp"
+        >
 
         <ru.github.igla.ferriswheel.FerrisWheelView
             android:id="@+id/ferrisWheelView"
@@ -37,7 +39,8 @@
             android:visibility="gone" />
 
     </FrameLayout>
-
     <include layout="@layout/bottomsheet_settings_attributes" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

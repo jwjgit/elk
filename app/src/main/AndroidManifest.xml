@@ -12,7 +12,11 @@
         android:theme="@style/AppTheme"
         >
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Login" >
 
@@ -27,12 +31,11 @@
 
         </activity>
         <activity android:name=".Birthday" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity android:name=".photo" />
+        <activity android:name=".TextSurfer" />
+        <activity android:name=".MusicPlay" />
     </application>
 
     <!-- 权限管理-->

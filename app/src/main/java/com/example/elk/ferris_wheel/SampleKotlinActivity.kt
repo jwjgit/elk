@@ -96,7 +96,7 @@ class SampleKotlinActivity : AppCompatActivity() {
         override fun onStopTrackingTouch(seekBar: SeekBar) {
         }
     }
-
+    /*
     override fun onBackPressed() {
         if (behavior.state == BottomSheetBehavior.STATE_EXPANDED) {
             behavior.state = BottomSheetBehavior.STATE_COLLAPSED
@@ -105,6 +105,8 @@ class SampleKotlinActivity : AppCompatActivity() {
         }
     }
 
+
+     */
     private fun initSettingsBottomSheet() {
         behavior = BottomSheetBehavior.from<View>(bottomSheet).apply {
             setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {

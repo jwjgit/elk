@@ -16,7 +16,7 @@
     <LinearLayout
         android:id="@+id/view_options_header"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
@@ -93,7 +93,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="2dp">
 
                 <TextView
                     android:id="@+id/startCircle"
@@ -155,7 +155,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:background="@null"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
