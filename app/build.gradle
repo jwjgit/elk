@@ -47,6 +47,7 @@ dependencies {
     implementation 'com.desarrollodroide:fragmenttransactionextended:1'
     implementation 'com.nightonke:boommenu:1.0.9'
     implementation 'com.github.elevenetc:textsurface:0.9.1'
-    //implementation
+    implementation  'com.sdsmdg.harjot:rotatingtext:1.0.2'
+    implementation 'com.github.MackHartley:RoundedProgressBar:2.1.0'
 
 }

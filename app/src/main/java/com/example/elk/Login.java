@@ -59,7 +59,14 @@ public class Login extends AppCompatActivity {
                                 });
                             } else {
                                 transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.SHAKE, null);
-                                Toast.makeText(Login.this,"重要的日子都记错了，找打！！！",Toast.LENGTH_LONG).show();
+                                if (!et_account.getText().toString().equals("jwjailjy")) {
+                                    Toast.makeText(Login.this, "love", Toast.LENGTH_LONG).show();
+
+                                }
+                                if (!et_password.getText().toString().equals("20190523")) {
+                                    Toast.makeText(Login.this, "重要的日子都记错了，生气！！！", Toast.LENGTH_LONG).show();
+
+                                }
                             }
                         }
                     }, 2000);

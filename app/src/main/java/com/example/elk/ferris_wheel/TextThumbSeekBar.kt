@@ -19,10 +19,10 @@ class TextThumbSeekBar :
 
     private val thumbSize = context.dpF(16f)
     private val textPaint: TextPaint = TextPaint().apply {
-        color = Color.WHITE
-        textSize = context.sp(14f)
+        color = Color.RED
         typeface = Typeface.DEFAULT
         textAlign = Paint.Align.CENTER
+        textSize = context.sp(15f)
     }
     private var bounds = Rect()
 

@@ -35,6 +35,7 @@ public class ScaleTextSample {
 
 		Text textD = TextBuilder.create("textD")
 				.setPosition(Align.LEFT_OF, textB)
+
 				.build();
 
 		Text textE = TextBuilder.create("textE")

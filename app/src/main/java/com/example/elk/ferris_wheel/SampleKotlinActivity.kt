@@ -22,13 +22,13 @@ class SampleKotlinActivity : AppCompatActivity() {
 
     private val clickCenterListener = object : FerrisWheelView.OnClickCenterListener {
         override fun onClickCenter(e: MotionEvent) {
-            Toast.makeText(this@SampleKotlinActivity, "Click center $e", Toast.LENGTH_LONG).show()
+            //Toast.makeText(this@SampleKotlinActivity, "Click center $e", Toast.LENGTH_LONG).show()
         }
     }
 
     private val clickCabinListener = object : FerrisWheelView.OnClickCabinListener {
         override fun onClickCabin(cabinNumber: Int, e: MotionEvent) {
-            Toast.makeText(this@SampleKotlinActivity, "Click cabin $cabinNumber", Toast.LENGTH_LONG).show()
+           // Toast.makeText(this@SampleKotlinActivity, "Click cabin $cabinNumber", Toast.LENGTH_LONG).show()
         }
     }
 

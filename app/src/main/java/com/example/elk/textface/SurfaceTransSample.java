@@ -29,6 +29,9 @@ public class SurfaceTransSample {
 				new TransSurface(duration, textC, Pivot.CENTER),
 				new TransSurface(duration, textB, Pivot.CENTER),
 				new TransSurface(duration, textA, Pivot.CENTER)
+
+
+
 		);
 	}
 }

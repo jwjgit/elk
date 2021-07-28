@@ -20,7 +20,7 @@ public class BuilderManager {
             R.drawable.bee,
             R.drawable.butterfly,
             R.drawable.cat,
-            R.drawable.deer,
+            R.drawable.elk,
             R.drawable.dolphin,
             R.drawable.eagle,
             R.drawable.horse,

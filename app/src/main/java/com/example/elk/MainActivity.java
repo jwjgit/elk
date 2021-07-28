@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.elk.ferris_wheel.SampleKotlinActivity;
 import com.example.elk.ferris_wheel.SampleKotlinActivityMonochrome;
+import com.example.elk.textface.Rotating;
 import com.nightonke.boommenu.BoomMenuButton;
 import com.nightonke.boommenu.Eases.EaseType;
 import com.nightonke.boommenu.Types.BoomType;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private   KonfettiView konfettiView;
     private BoomMenuButton boomMenuButton;
-    private int[][] subButtonColors=new int[][]{{Color.RED,Color.parseColor("#00BFFF")},{Color.RED,Color.GREEN},{Color.RED,Color.parseColor("#DAA520")}};
+    private int[][] subButtonColors=new int[][]{{Color.RED,Color.parseColor("#00BFFF")},{Color.RED,Color.GREEN},{Color.RED,Color.parseColor("#DAA520")},{Color.RED,Color.parseColor("#DA70D6")}};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .addSubButton(this, R.drawable.bear, subButtonColors[0], "ferris wheel")
                 .addSubButton(this, R.drawable.deer1, subButtonColors[1], "music")
                 .addSubButton(this, R.drawable.squirrel, subButtonColors[2], "poems")
+                .addSubButton(this,R.drawable.bee,subButtonColors[3],"login")
                 .frames(80)
                 .duration(800)
                 .delay(100)
@@ -116,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .hideOrder(OrderType.RANDOM)
                 .button(ButtonType.CIRCLE)
                 .boom(BoomType.PARABOLA)
-                .place(PlaceType.CIRCLE_3_3)
+                .place(PlaceType.CIRCLE_4_2)
                 .showMoveEase(EaseType.EaseOutBack)
                 .hideMoveEase(EaseType.EaseOutCirc)
                 .showScaleEase(EaseType.EaseOutBack)
@@ -170,10 +172,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 public void run() {
 
                                     startActivity(TextSurfer.class);
+                                    // startActivity(Rotating.class);
                                 }
                             }, 700);
 
                         }
+                        if(buttonIndex==3){
+                            //Toast.makeText(MainActivity.this,"3",Toast.LENGTH_LONG).show();
+                            Handler handler=new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    startActivity(Login.class);
+                                }
+                            }, 700);
+
+                        }
+
                     }
                 })
                 // this only work when the place type is SHARE_X_X

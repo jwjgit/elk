@@ -27,10 +27,11 @@ import su.levenetc.android.textsurface.contants.Side;
 public class FactCookie {
     public static void play(TextSurface textSurface, AssetManager assetManager) {
 
-        final Typeface robotoBlack = Typeface.createFromAsset(assetManager, "fonts/Roboto-Black.ttf");
+        //final Typeface robotoBlack = Typeface.createFromAsset(assetManager, "fonts/Roboto-Black.ttf");
+        Typeface typeface2 = Typeface.createFromAsset(assetManager, "fonts/Reckoner_Bold.ttf");
         Paint paint = new Paint();
         paint.setAntiAlias(true);
-        paint.setTypeface(robotoBlack);
+        paint.setTypeface(typeface2);
 
         Text textDaai = TextBuilder
                 .create("我们")
@@ -114,10 +115,24 @@ public class FactCookie {
 
         textSurface.play(
                 new Sequential(
-                        ShapeReveal.create(textDaai, 750, SideCut.show(Side.LEFT), false),
+                        ShapeReveal.create(textDevilishGang, 750, SideCut.show(Side.LEFT), false),
+                        new Parallel(ShapeReveal.create(textSignsInTheAir, 600, SideCut.hide(Side.LEFT), false), new Sequential(Delay.duration(300), ShapeReveal.create(textSignsInTheAir, 600, SideCut.show(Side.LEFT), false))),
+                        new Parallel(new TransSurface(500, textBraAnies, Pivot.CENTER), ShapeReveal.create(textBraAnies, 100, SideCut.show(Side.LEFT), false)),
+                        Delay.duration(500),
+                        ShapeReveal.create(textFokkenGamBra, 750, SideCut.show(Side.LEFT), false),
                         new Parallel(ShapeReveal.create(textDaai, 600, SideCut.hide(Side.LEFT), false), new Sequential(Delay.duration(300), ShapeReveal.create(textDaai, 600, SideCut.show(Side.LEFT), false))),
                         new Parallel(new TransSurface(500, textBraAnies, Pivot.CENTER), ShapeReveal.create(textBraAnies, 100, SideCut.show(Side.LEFT), false)),
-                       // Delay.duration(500),
+                        Delay.duration(500),
+                        ShapeReveal.create(textSignsInTheAir, 750, SideCut.show(Side.LEFT), false),
+                        new Parallel(ShapeReveal.create(textDaai, 600, SideCut.hide(Side.LEFT), false), new Sequential(Delay.duration(300), ShapeReveal.create(textDaai, 600, SideCut.show(Side.LEFT), false))),
+                        new Parallel(new TransSurface(500, textBraAnies, Pivot.CENTER), ShapeReveal.create(textBraAnies, 100, SideCut.show(Side.LEFT), false)),
+                        Delay.duration(500),
+
+
+                          new Parallel(
+                                //ShapeReveal.create(text1, 1500, SideCut.hide(Side.LEFT), false),
+                                new Sequential(Delay.duration(250), ShapeReveal.create(text1, 1500, SideCut.hide(Side.LEFT), false))
+                        ),
                         new Parallel(new TransSurface(150, textFokkenGamBra, Pivot.CENTER), Slide.showFrom(Side.LEFT, textFokkenGamBra, 750), ChangeColor.to(textFokkenGamBra, 750, Color.WHITE)),
                         Delay.duration(500),
                         new Parallel(TransSurface.toCenter(textHaai, 500), Rotate3D.showFromSide(textHaai, 750, Pivot.TOP)),
@@ -151,6 +166,8 @@ public class FactCookie {
                                 //ShapeReveal.create(text1, 1500, SideCut.hide(Side.LEFT), false),
                                 new Sequential(Delay.duration(250), ShapeReveal.create(text1, 1500, SideCut.hide(Side.LEFT), false))
                         )
+
+
 
                 )
         );
